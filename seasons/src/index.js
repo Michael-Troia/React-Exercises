@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
+import Spinner from './Spinner';
 
     // componentDidMount(){}  // called when component is first mounted
     // componentDidUpdate(){} // called whenever a component is updated, after the render method
@@ -24,7 +25,7 @@ class App extends React.Component {
         if (!this.state.errorMessage && this.state.lat) {
             return <SeasonDisplay lat={this.state.lat} /> 
         }
-        return <div>Loading!</div>
+        return <Spinner message="Please accept location request" />; // reference to loading component
     }
 }
 
