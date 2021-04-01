@@ -23,7 +23,7 @@ class App extends React.Component {
                 <VideoList videos={ this.state.videos } />
             </div>
         ); 
-    }
-}
+    };
+};
 
 export default App;
